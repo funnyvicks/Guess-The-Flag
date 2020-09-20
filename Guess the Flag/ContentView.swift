@@ -9,9 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        AngularGradient (gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple, .red]), center: .center).edgesIgnoringSafeArea(.all)
-                    Text("Hello, world!")
-    }
+        Button(action: {
+            print("Edit button was tapped")
+        }) {
+            HStack(spacing: 10) {
+                Image(systemName: "pencil").renderingMode(.original)
+                Text("Edit")
+            }
+        }
+        }
 }
 
 struct ContentView_Previews: PreviewProvider {
